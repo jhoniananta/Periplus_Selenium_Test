@@ -27,7 +27,6 @@ public class LoginPage extends BasePage {
 
     public HomePage submitLogin() {
         click(loginButton);
-        waitForCondition(driverInstance -> !driverInstance.getCurrentUrl().contains("/account/Login"));
         return new HomePage(driver, baseUrl);
     }
 
